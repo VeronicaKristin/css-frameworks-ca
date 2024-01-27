@@ -17,7 +17,7 @@
 		<script defer src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 		<script defer src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	</head>
-	<body data-bs-theme="dark">
+	<body data-bs-theme="dark" style="min-height: 100vh; display: flex; flex-direction: column">
 		<header>
 			<nav class="navbar navbar-expand-lg bg-body-tertiary">
 				<div class="container-fluid">
@@ -56,16 +56,127 @@
 		</header>
 		<main>
 			<section>
-				<div class="dropdown d-flex justify-content-center">
-					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">sort</button>
-					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">New</a></li>
-						<li><a class="dropdown-item" href="#">Old</a></li>
-						<li><a class="dropdown-item" href="#">Popular</a></li>
-					</ul>
+				<div class="container">
+					<h2>Home</h2>
+
+					<div class="mb-3">
+						<label for="exampleFormControlTextarea1" class="form-label">Create new post</label>
+						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+					</div>
+					<div class="mb-3">
+						<label for="formFile" class="form-label">Add image</label>
+						<input class="form-control" type="file" id="formFile" />
+					</div>
+					<div class="mb-3">
+						<button class="btn btn-outline-info" type="submit" disabled>Post</button>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="container">
+					<h3>Feed</h3>
+					<select class="container form-select text-center" aria-label="Default select example">
+						<option selected>Sort</option>
+						<option value="1">New</option>
+						<option value="2">Old</option>
+						<option value="3">Popular</option>
+					</select>
+				</div>
+			</section>
+			<section class="container">
+				<div class="row row-cols-1 row-cols-md-3 g-4">
+					<div class="col">
+						<div class="card h-100">
+							<img src="../images/IMG_0191.jpg" class="card-img-top" alt="woman with pink hair sitting with pc" />
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">
+									This is a wider card with supporting text below as a natural lead-in to additional content. This content is a
+									little bit longer.
+								</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-body-secondary">Last updated 3 mins ago</small>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100">
+							<img src="../images/IMG_0192.jpg" class="card-img-top" alt="woman with blue hair sitting with pc" />
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-body-secondary">Last updated 3 mins ago</small>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100">
+							<img src="../images/IMG_0193.jpg" class="card-img-top" alt="woman with pink hair sitting with pc" />
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">
+									This is a wider card with supporting text below as a natural lead-in to additional content. This card has even
+									longer content than the first to show that equal height action.
+								</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-body-secondary">Last updated 2 hours ago</small>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100">
+							<img src="../images/IMG_0191.jpg" class="card-img-top" alt="woman with pink hair sitting with pc" />
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">
+									This is a wider card with supporting text below as a natural lead-in to additional content. This content is a
+									little bit longer.
+								</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-body-secondary">Last updated 3 mins ago</small>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100">
+							<img src="../images/IMG_0191.jpg" class="card-img-top" alt="woman with pink hair sitting with pc" />
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">
+									This is a wider card with supporting text below as a natural lead-in to additional content. This content is a
+									little bit longer.
+								</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-body-secondary">Last updated 3 mins ago</small>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card h-100">
+							<img src="../images/IMG_0191.jpg" class="card-img-top" alt="woman with pink hair sitting with pc" />
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">
+									This is a wider card with supporting text below as a natural lead-in to additional content. This content is a
+									little bit longer.
+								</p>
+							</div>
+							<div class="card-footer">
+								<small class="text-body-secondary">Last updated 3 mins ago</small>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>
-		<footer></footer>
+		<footer class="container text-center mt-auto">
+			<p>Copyright Game hub 2024</p>
+		</footer>
 	</body>
 </html>
