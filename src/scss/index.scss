@@ -8,3 +8,10 @@
 
 @import "variables";
 @import "buttons";
+
+body {
+	@extend .container-fluid;
+	@extend .d-flex;
+	@extend .flex-column;
+	min-height: 100vh;
+}
