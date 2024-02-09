@@ -1,10 +1,3 @@
-body {
-	@extend .container-fluid;
-	@extend .d-flex;
-	@extend .flex-column;
-	min-height: 100vh;
-}
-
 @import "variables";
 @import "buttons";
 @import "../../node_modules/bootstrap/scss/bootstrap";
@@ -14,3 +7,30 @@ body {
 @import "../../node_modules/bootstrap/scss/variables-dark";
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
+
+body {
+	@extend .container-fluid;
+	@extend .d-flex;
+	@extend .flex-column;
+}
+
+.custom-checkbox-input {
+	&:checked {
+		background-color: cyan;
+		border-color: cyan;
+	}
+
+	&:checked ~ .form-check-label {
+		color: cyan;
+	}
+}
+
+.form-control:focus {
+	border-color: cyan;
+	box-shadow: 0 0 0 0.25rem rgba(0, 255, 255, 0.25);
+}
+
+.card {
+	border: 2px solid cyan;
+	border-radius: 10px;
+}
