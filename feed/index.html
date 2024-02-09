@@ -57,34 +57,49 @@
 			</nav>
 		</header>
 		<main>
-			<section>
-				<div class="container">
-					<h2>Home</h2>
+			<section class="container">
+				<h3>Feed</h3>
+				<div class="d-flex justify-content-between align-items-center">
+					<div>
+						<select class="form-select text-center">
+							<option selected>Sort</option>
+							<option value="1">New</option>
+							<option value="2">Old</option>
+							<option value="3">Popular</option>
+						</select>
+					</div>
 
-					<div class="mb-3">
-						<label for="exampleFormControlTextarea1" class="form-label">Create new post</label>
-						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-					</div>
-					<div class="mb-3">
-						<label for="formFile" class="form-label">Add image</label>
-						<input class="form-control" type="file" id="formFile" />
-					</div>
-					<div class="mb-3">
-						<button class="btn btn-outline-info" type="submit" disabled>Post</button>
+					<div>
+						<button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModal">Add post</button>
 					</div>
 				</div>
 			</section>
-			<section>
-				<div class="container">
-					<h3>Feed</h3>
-					<select class="container form-select text-center" aria-label="Default select example">
-						<option selected>Sort</option>
-						<option value="1">New</option>
-						<option value="2">Old</option>
-						<option value="3">Popular</option>
-					</select>
+
+			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h1 class="modal-title fs-5" id="exampleModalLabel">Create post</h1>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div class="row g-3">
+								<label for="exampleFormControlTextarea1" class="form-label">Create new post</label>
+								<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+							</div>
+							<div class="mb-3">
+								<label for="formFile" class="form-label">Add image</label>
+								<input class="form-control" type="file" id="formFile" />
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+							<button class="btn btn-outline-info" data-bs-dismiss="modal">Post</button>
+						</div>
+					</div>
 				</div>
-			</section>
+			</div>
+
 			<br />
 			<section class="container">
 				<div class="row row-cols-1 row-cols-md-3 g-4">
