@@ -1,3 +1,12 @@
+body {
+	@extend .container-fluid;
+	@extend .d-flex;
+	@extend .flex-column;
+	min-height: 100vh;
+}
+
+@import "variables";
+@import "buttons";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/bootstrap/scss/maps";
 @import "../../node_modules/bootstrap/scss/mixins";
@@ -5,13 +14,3 @@
 @import "../../node_modules/bootstrap/scss/variables-dark";
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
-
-@import "variables";
-@import "buttons";
-
-body {
-	@extend .container-fluid;
-	@extend .d-flex;
-	@extend .flex-column;
-	min-height: 100vh;
-}
