@@ -16,6 +16,7 @@
 		<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="./dist/css/index.css" />
 		<script defer src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+		<script defer src="js/login.mjs" type="module"></script>
 	</head>
 	<body data-bs-theme="dark">
 		<header>
@@ -27,7 +28,7 @@
 		</header>
 		<main>
 			<div>
-				<form class="px-4 py-3" action="feed/index.html" method="get">
+				<form class="px-4 py-3" id="loginForm" action="feed/index.html" method="get">
 					<div class="mb-3">
 						<label for="exampleFormControlInput1" class="form-label">Email address</label>
 						<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required />
@@ -46,11 +47,9 @@
 						</div>
 					</div>
 					<button type="submit" class="btn btn-outline-info">Sign in</button>
-					<button type="submit" class="btn btn-outline-info">Sign up</button>
 				</form>
 
-				<a class="dropdown-item text-center" href="#">New around here? Sign up</a>
-				<a class="dropdown-item text-center" href="#">Forgot password?</a>
+				<p class="dropdown-item text-center" href="#">New around here? Sign up</p>
 			</div>
 		</main>
 	</body>
