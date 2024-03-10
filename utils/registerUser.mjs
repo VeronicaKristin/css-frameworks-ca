@@ -3,7 +3,7 @@ import { doFetch } from "./doFetch.mjs";
 
 export async function registerUser(name, email, password) {
 	console.log("Register user");
-	await doFetch(REGISTER_URL, {
+	await doFetch(REGISTER_URL, false, {
 		method: "POST",
 		body: JSON.stringify({
 			name,
