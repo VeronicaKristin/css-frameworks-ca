@@ -14,13 +14,10 @@ export async function doFetch(url, isAuth = false, options = {}) {
 		// If isAuth is true
 		// Add auth token to header
 
-		console.log(combinedOptions);
-
 		const response = await fetch(url, combinedOptions);
 		const json = await response.json();
 		return json;
 	} catch (error) {
-		console.log(error);
 		throw error;
 	} finally {
 		//

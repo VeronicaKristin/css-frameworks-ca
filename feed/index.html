@@ -19,6 +19,8 @@
 		<script defer src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 		<script defer src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 		<script type="module" src="./feed.mjs"></script>
+		<script type="module" src="./createPost.mjs"></script>
+		<script type="module" src="./sort.mjs"></script>
 	</head>
 	<body data-bs-theme="dark">
 		<header>
@@ -62,7 +64,7 @@
 				<h3 class="pink">Feed</h3>
 				<div class="d-flex justify-content-between align-items-center">
 					<div>
-						<select class="form-select text-center">
+						<select id="sortSelect" class="form-select text-center">
 							<option selected>Sort</option>
 							<option value="1">New</option>
 							<option value="2">Old</option>
@@ -85,6 +87,10 @@
 						</div>
 						<div class="modal-body">
 							<div class="row g-3">
+								<label for="exampleFormControlTextarea1" class="form-label">Title</label>
+								<textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+							</div>
+							<div class="row g-3">
 								<label for="exampleFormControlTextarea1" class="form-label">Create new post</label>
 								<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 							</div>
@@ -95,7 +101,7 @@
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-							<button class="btn btn-outline-info" data-bs-dismiss="modal">Post</button>
+							<button id="postButton" class="btn btn-outline-info" data-bs-dismiss="modal">Post</button>
 						</div>
 					</div>
 				</div>
