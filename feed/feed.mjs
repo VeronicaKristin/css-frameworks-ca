@@ -6,7 +6,7 @@ import { doFetch } from "../utils/doFetch.mjs";
 
 const generateSinglePostHtml = (post) => {
 	const postContainer = document.createElement("div");
-	postContainer.classList.add("card-body", "col", "card", "h-100");
+	postContainer.classList.add("card-body", "col", "card", "h-100", "mx-2");
 
 	const postMedia = document.createElement("img");
 	postMedia.src = post.media;
