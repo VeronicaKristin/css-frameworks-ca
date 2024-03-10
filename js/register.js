@@ -3,12 +3,6 @@ import { doFetch } from ".fetch.js";
 
 const registrationForm = document.querySelector("#registrationForm");
 
-/**
- * Adds an event listener to the registration form to handle the submit event.
- * Prevents the default form submission and extracts user input from the form fields
- * to pass to the registerUser function for user registration.
- */
-
 registrationForm.addEventListener("submit", (event) => {
 	event.preventDefault();
 	console.log(event);
@@ -17,17 +11,6 @@ registrationForm.addEventListener("submit", (event) => {
 	const password = event.target[2].value;
 	registerUser(name, email, password);
 });
-
-/**
- * Registers a new user by sending a POST request to the registration URL with user's name, email, and password.
- * On success, displays a success message and redirects the user to the homepage after 2 seconds.
- * On failure, displays an error message.
- *
- * @param {string} name - The user's name.
- * @param {string} email - The user's email address.
- * @param {string} password - The user's chosen password.
- * @returns {Promise<void>} A promise that resolves with no value when the registration is successful, or rejects with an error message if the registration fails.
- */
 
 async function registerUser(name, email, password) {
 	try {
