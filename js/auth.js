@@ -1,24 +1,23 @@
-/**
- * Saves the provided authentication token to localStorage.
- * This token is typically used for subsequent API requests that require authentication.
- *
- * @param {string} token - The authentication token to be stored.
- */
+// Authentication
 
-export const addAuthToken = (token) => {
-	console.log("Add token", token);
-	localStorage.setItem("access-token", token);
-};
+export async function onAuth(event) {
+	event.preventDefult();
+	const name = event.target.name.value;
+	const email = event.target.email.value;
+	const password = event.target.password.value;
 
-/**
- * Retrieves the authentication token from localStorage.
- * This token is used for making authenticated API requests.
- *
- * @returns {string|null} Returns the stored authentication token if it exists, otherwise null.
- */
+	if (event.submitter.dataset.auth === "login") {
+		await LOGIN_URL(email, password);
+	} else {
+		await register(name, email, password);
+		await LOGIN_URL(email, password);
+	}
 
-export const getAuthToken = () => {
-	const accessToken = localStorage.getItem("access-token");
-	console.log(accessToken);
-	return accessToken;
-};
+	const posts = await getPosts();
+}
+
+export function setAuthListener() {
+	document.forms.auth.addEventListener("submit", onAuth);
+}
+
+setAuthListener();
