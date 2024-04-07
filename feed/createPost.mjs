@@ -27,9 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				body: JSON.stringify(postData),
 			});
 
-			console.log(response);
-			if (response.ok) {
-				const responseData = await response.json();
+			if (response) {
 				alert("Post created successfully!");
 				// Optionally clear form fields or perform other actions
 				document.getElementById("postTitle").value = "";

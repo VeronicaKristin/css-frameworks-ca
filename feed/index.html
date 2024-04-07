@@ -52,10 +52,11 @@
 							</li>
 						</ul>
 
-						<form class="d-flex" role="search">
-							<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+						<form class="d-flex" role="search" id="search">
+							<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="tags" />
 							<button class="btn btn-outline-info" type="submit">Search</button>
 						</form>
+						<div class="mt-3" id="searchResults"></div>
 					</div>
 				</div>
 			</nav>
@@ -108,8 +109,8 @@
 			</div>
 
 			<br />
-			<section class="container">
-				<div class="row row-cols-1 row-cols-md-3 g-4" id="post-display-container"></div>
+			<section class="container" style="max-width: 600px">
+				<div class="row row-cols-1 g-4" id="post-display-container"></div>
 			</section>
 		</main>
 		<br />
