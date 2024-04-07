@@ -20,6 +20,7 @@
 		<script defer src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 		<script type="module" src="./feed.mjs"></script>
 		<script type="module" src="./createPost.mjs"></script>
+		<script type="module" src="./clearForm.mjs"></script>
 		<script type="module" src="./sort.mjs"></script>
 	</head>
 	<body data-bs-theme="dark">
@@ -65,10 +66,9 @@
 				<div class="d-flex justify-content-between align-items-center">
 					<div>
 						<select id="sortSelect" class="form-select text-center">
-							<option selected>Sort</option>
+							<option selected disabled>Sort</option>
 							<option value="1">New</option>
 							<option value="2">Old</option>
-							<option value="3">Popular</option>
 						</select>
 					</div>
 
@@ -87,21 +87,21 @@
 						</div>
 						<div class="modal-body">
 							<div class="row g-3">
-								<label for="exampleFormControlTextarea1" class="form-label">Title</label>
-								<textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+								<label for="postTitle" class="form-label">Title</label>
+								<textarea class="form-control" id="postTitle" rows="1"></textarea>
 							</div>
 							<div class="row g-3">
-								<label for="exampleFormControlTextarea1" class="form-label">Create new post</label>
-								<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+								<label for="postContent" class="form-label">Create new post</label>
+								<textarea class="form-control" id="postContent" rows="3"></textarea>
 							</div>
 							<div class="mb-3">
-								<label for="formFile" class="form-label">Add image</label>
-								<input class="form-control" type="file" id="formFile" />
+								<label for="postImage" class="form-label">Add image</label>
+								<input class="form-control" type="text" id="postImage" />
 							</div>
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-							<button id="postButton" class="btn btn-outline-info" data-bs-dismiss="modal">Post</button>
+							<button id="postButton" class="btn btn-outline-info">Post</button>
 						</div>
 					</div>
 				</div>
